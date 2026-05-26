@@ -1,303 +1,80 @@
+:root {
+    --primary-color: #055a05;
+    /* forest green */
+    --secondary-color: #f4a261;
+    /* warm sand */
+    --accent1-color: #264653;
+    /* dark slate blue */
+    --accent2-color: #e9c46a;
+    /* light golden yellow */
+    --heading-font: "Times New Roman", "Georgia", serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #d8cfff;
-    padding: 10px 20px;
-    border: 1px solid #333;
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
 }
 
-.logo img {
-    width: 100px;
-    height: auto;
-    display: block;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    background-color: blue;
-    border: 1px solid #333;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    border: 1px solid #333;
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-.nav-links li {
-    border-right: 1px solid #333;
-}
-
-nav li {
-    /* Creates the vertical divider lines between buttons */
-    border-right: 1px solid #333;
-}
-
-nav {
-    display: flex;
-    justify-content: flex-end;
-    gap: 30px;
-}
-
-.nav-links li:last-child {
-    border-right: none;
-}
-
-nav li:last-child {
-    /* Removes the last divider line */
-    border-right: none;
-}
-
-.nav-links li:not(:last-child) a {
-    border-right: none;
-}
-
-.nav-links a {
-    display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #333;
-    background-color: #fff;
-    border: 1px solid #777;
-    font-family: Arial, sans-serif;
-    transition: background-color 0.3s;
-}
-
-nav a {
-    text-decoration: none;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    padding: 15px;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    background-color: #f0f0f0;
-}
-
-/* Hero Positioning */
 .hero {
     position: relative;
-    width: 100%;
 }
 
-.hero-img {
-    width: 100%;
-    height: auto;
+.hero img {
     display: block;
-}
-
-.hero-msg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.contact-info {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
-}
-
-.contact-info h2 {
-    font-weight: normal;
-    font-size: 2rem;
-    margin-bottom: 5px;
-}
-
-.contact-info address {
-    font-style: normal;
-    font-weight: bold;
-    color: #333;
-}
-
-.contact-info a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    padding: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.map-box img {
     width: 100%;
     height: auto;
-    border: 1px solid #ccc;
 }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.form-group {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.form-group label {
-    flex: 1;
-}
-
-.form-group input,
-.form-group textarea {
-    flex: 2;
-    padding: 8px;
-    border: 1px solid #333;
-    border-radius: 4px;
-}
-
-textarea {
-    height: 100px;
-}
-
-.radio-group,
-.checkbox-group {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-button {
-    padding: 10px;
-    background-color: #e0e0e0;
-    border: 1px solid #333;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-button:hover {
-    background-color: #ccc;
-}
-
-.team-section {
-    text-align: center;
-    padding: 40px;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-}
-
-.team-section h2 {
-    margin-bottom: 30px;
-    font-size: 1.8rem;
-}
-
-.profiles-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.profile-card {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.profile-card img {
-    width: 150px;
-    height: auto;
-    display: block;
-    margin-bottom: 10px;
+body {
+    font-family: var(--body-font);
+    color: var(--accent1-color);
 }
 
-.profile-card figcaption {
-    font-size: 0.9rem;
-    color: #333;
-}
-
+header,
+main,
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background-color: #d8cfff;
-    border: 1px solid #333;
+    width: 840px;
+    margin: 0 auto;
 }
 
-footer p {
-    margin: 0;
-    font-family: Arial, sans-serif;
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
 }
 
-/* Home Page Grid */
-.home-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    padding: 40px;
-}
-
-.grid-card img {
+h1 {
+    position: absolute;
+    top: 20px;
     width: 100%;
-    border-radius: 8px;
-}
-
-/* Trips Page Layout */
-.trip-details {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-}
-
-.trip-item {
-    flex: 1 1 300px;
-    margin: 10px;
-    border: 1px solid #ddd;
-    padding: 15px;
+    padding: 16px;
     text-align: center;
+    opacity: 0.7;
+    background-color: var(--accent1-color);
+    color: #fff;
+    /* white text – make sure there is enough contrast with the background-color */
 }
 
-/* Table Styling */
-table {
-    width: 80%;
-    margin: 20px auto;
-    border-collapse: collapse;
+.hero article img {
+    float: right;
+    width: 125px;
 }
 
-th,
-td {
-    border: 1px solid #333;
-    padding: 10px;
-    text-align: left;
+nav,
+p,
+section,
+article {
+    margin: 16px;
+    padding: 8px;
 }
 
-thead {
-    background-color: #004a7c;
-    color: white;
-}
-
-.social-links {
-    display: flex;
-    gap: 10px;
-}
-
-.social-links img {
-    width: 35px;
-    height: 35px;
-    border: 1px solid #333;
-    background-color: white;
+.socialmedia a {
+    text-decoration: none;
 }
