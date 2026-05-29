@@ -120,31 +120,73 @@ nav a:hover {
 /* ==========================================================================
    4. History Section (3-Column Layout)
    ========================================================================== */
+/* --- History Section Wrapper --- */
 .history-section {
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
-    margin: 20px;
-    padding: 30px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
+    /* Horizontally centers the "History" heading */
+    font-family: Arial, sans-serif;
 }
 
+/* --- Section Heading --- */
 .history-section h2 {
+    font-size: 2rem;
     margin-bottom: 20px;
-    font-size: 1.8rem;
+    color: #000000;
 }
 
+/* --- 3-Column Grid Layout --- */
 .history-grid {
     display: grid;
+    /* Creates 3 side-by-side columns: 
+       Left text (1fr) | Center image (fixed max-width) | Right text (1fr) */
     grid-template-columns: 1fr 300px 1fr;
-    /* Text | Middle Image Box | Text */
     gap: 30px;
+    /* Space between the text columns and the image box */
     align-items: center;
+    /* Vertically aligns text columns cleanly with the image center */
     text-align: left;
+    /* Keeps your paragraphs cleanly left-aligned */
+    line-height: 1.6;
 }
 
-.history-center-box {
-    background-color: #4a148c;
-    /* Dark purple container box */
+/* --- Center Image Accent Container --- */
+/* --- Main Section Wrapper --- */
+.history-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    /* Keeps the "History" heading centered on top */
+    font-family: Arial, sans-serif;
+}
+
+/* --- Section Title --- */
+.history-section h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #000;
+}
+
+/* --- The 3-Column Split Container --- */
+.history-content {
+    display: grid;
+    /* Splits into 3 fractions: equal text columns on the sides, fixed width box in the middle */
+    grid-template-columns: 1fr 300px 1fr;
+    gap: 24px;
+    /* Even spacing between the columns */
+    align-items: center;
+    /* Vertically centers the text alongside the image box */
+    text-align: left;
+    /* Keeps your paragraph text reading cleanly left-to-right */
+}
+
+/* --- Center Purple Image Box --- */
+.history-img-box {
+    background-color: #3f1dcb;
+    /* Purple placeholder color from wireframe */
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -152,9 +194,11 @@ nav a:hover {
     min-height: 180px;
 }
 
-.history-center-box img {
+/* --- Image Scaling --- */
+.history-img-box img {
     max-width: 100%;
     height: auto;
+    display: block;
 }
 
 /* ==========================================================================
