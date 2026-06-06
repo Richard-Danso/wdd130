@@ -138,14 +138,14 @@ nav a:hover {
 }
 
 /* --- 3-Column Grid Layout --- */
-.history-grid {
-    display: grid;
+.history-grid .second.first {
+    display: inline-block;
     /* Creates 3 side-by-side columns: 
        Left text (1fr) | Center image (fixed max-width) | Right text (1fr) */
     grid-template-columns: 1fr 300px 1fr;
     gap: 30px;
     /* Space between the text columns and the image box */
-    align-items: center;
+    align-items: right;
     /* Vertically aligns text columns cleanly with the image center */
     text-align: left;
     /* Keeps your paragraphs cleanly left-aligned */
@@ -172,33 +172,32 @@ nav a:hover {
 
 /* --- The 3-Column Split Container --- */
 .history-content {
-    display: grid;
+    display: inline-block;
     /* Splits into 3 fractions: equal text columns on the sides, fixed width box in the middle */
     grid-template-columns: 1fr 300px 1fr;
     gap: 24px;
     /* Even spacing between the columns */
     align-items: center;
     /* Vertically centers the text alongside the image box */
-    text-align: left;
+    text-align: left right;
     /* Keeps your paragraph text reading cleanly left-to-right */
 }
 
 /* --- Center Purple Image Box --- */
-.history-img-box {
-    background-color: #3f1dcb;
+.history-image-box {
     /* Purple placeholder color from wireframe */
     padding: 20px;
-    display: flex;
+    display: inline-block;
     justify-content: center;
-    align-items: center;
-    min-height: 180px;
+    align-items: right;
+    min-height: 10px;
 }
 
 /* --- Image Scaling --- */
-.history-img-box img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+.history-image-box img {
+    max-width: 20%;
+    height: 10px;
+    display: 0px;
 }
 
 /* ==========================================================================
