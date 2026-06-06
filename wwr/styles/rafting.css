@@ -179,7 +179,7 @@ nav a:hover {
     /* Even spacing between the columns */
     align-items: center;
     /* Vertically centers the text alongside the image box */
-    text-align: left right;
+    text-align: left, right;
     /* Keeps your paragraph text reading cleanly left-to-right */
 }
 
