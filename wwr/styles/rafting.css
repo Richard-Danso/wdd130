@@ -286,3 +286,255 @@ footer {
     padding: 5px;
     /* Keeps social icons clean within their boxes */
 }
+
+/* --- Global Styles & Color Variables --- */
+:root {
+    --lavender-bg: #dcd0f7;
+    --light-gray-section: #f8f8f8;
+    --border-line: #a6a6a6;
+    --text-color: #222222;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+/* --- Header & Navigation Layout (Flexbox) --- */
+header {
+    background-color: var(--lavender-bg);
+    border: 1px solid var(--border-line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    margin-bottom: 30px;
+}
+
+header img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    border: 1px solid var(--border-line);
+    background-color: #e0e0e0;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 5px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: #ffffff;
+    border: 1px solid var(--border-line);
+    padding: 8px 24px;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* --- Centered Company Address Block --- */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.contact-info h2 {
+    margin: 0 0 10px 0;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.contact-info address {
+    font-style: normal;
+    line-height: 1.5;
+}
+
+.contact-info address a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+/* --- Main Layout Grid (Map & Form Side-by-Side) --- */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+}
+
+/* Map Column */
+.map-box img {
+    width: 100%;
+    height: auto;
+    min-height: 350px;
+    object-fit: cover;
+    border: 1px solid var(--border-line);
+}
+
+/* Form Structural Layout */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: start;
+}
+
+.form-group label {
+    font-weight: normal;
+    padding-top: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-line);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.form-group textarea {
+    height: 110px;
+    resize: vertical;
+}
+
+/* Radio Group Alignment */
+.radio-group {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: start;
+}
+
+.radio-group p {
+    margin: 0;
+    font-weight: normal;
+    grid-column: 1;
+}
+
+.radio-group label {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+/* Checkbox and Button Indentation offset */
+.checkbox-group {
+    margin-left: 120px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.contact-form button {
+    margin-left: 120px;
+    background-color: #e0e0e0;
+    border: 1px solid var(--border-line);
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.contact-form button:hover {
+    background-color: #d0d0d0;
+}
+
+/* --- Team/Employee Gallery Section (Grid Layout) --- */
+.team-section {
+    border: 1px solid var(--border-line);
+    background-color: var(--light-gray-section);
+    padding: 30px 20px;
+    max-width: 1000px;
+    margin: 0 auto 30px auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.team-section h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+    font-weight: normal;
+}
+
+.profiles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.profile-card {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    background-color: #e0e0e0;
+    border: 1px solid var(--border-line);
+}
+
+.profile-card figcaption {
+    font-size: 0.95rem;
+}
+
+/* --- Footer Layout Section (Flexbox Alignment) --- */
+footer {
+    background-color: var(--lavender-bg);
+    border: 1px solid var(--border-line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+footer p {
+    margin: 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
