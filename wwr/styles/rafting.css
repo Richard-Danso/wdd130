@@ -538,3 +538,239 @@ footer p {
     height: 30px;
     object-fit: contain;
 }
+
+nav ul {
+    display: flex;
+    list-style: none;
+    border: 1px solid #444;
+    background-color: #fff;
+}
+
+nav ul li {
+    border-right: 1px solid #444;
+}
+
+nav ul li:last-child {
+    border-right: none;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+/* ==========================================
+   3. MAIN CONTENT BLOCKS (Wireframe Layout)
+   ========================================== */
+
+/* Standard content block wrapper matching wireframe styling */
+.contact-info,
+.contact-container,
+.team-section {
+    background-color: #fff;
+    border: 1px solid #444;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Section Title Headers */
+main h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+/* --- Contact Info / Main Intro Section --- */
+.contact-info address {
+    font-style: normal;
+    margin-top: 10px;
+}
+
+/* --- Split Layout: Map & Form side-by-side --- */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.map-box img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+/* Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Radio & Checkbox Alignments */
+.radio-group,
+.checkbox-group {
+    margin: 5px 0;
+}
+
+.radio-group p {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.radio-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+button[type="submit"] {
+    background-color: #4b2ca3;
+    /* Dark purple matching theme accent */
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #361f75;
+}
+
+/* --- Team Section / Card Gallery (Adventure Awaits row) --- */
+.profiles-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.profile-card {
+    background-color: #eaeaea;
+    border: 1px solid #ccc;
+    padding: 15px;
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    text-align: center;
+}
+
+.profile-card img {
+    width: 100%;
+    height: auto;
+    background-color: #ccc;
+    margin-bottom: 10px;
+}
+
+.profile-card figcaption {
+    font-size: 14px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* ==========================================
+   4. FOOTER (Purple Block with Icons)
+   ========================================== */
+footer {
+    background-color: #e0d4fc;
+    /* Light purple from wireframe */
+    border: 1px solid #999;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    font-weight: bold;
+    color: #000;
+}
+
+/* Structural rows layout block foundation */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Common Header Banner Style matching the top lavender segment */
+header {
+    background-color: #e0d4fc;
+    border: 1px solid #b3a2df;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Home Page Dual-Column Grid Layout */
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.grid-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.grid-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Common Footer Banner Block matching the bottom lavender segment */
+footer {
+    background-color: #e0d4fc;
+    border: 1px solid #b3a2df;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
